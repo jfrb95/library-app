@@ -1,1 +1,1 @@
-A library app to test various skills. Not currently uploaded to github. not made to look nice yet
+A library app to test various skills. Not made to look nice yet.
