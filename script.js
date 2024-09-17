@@ -2,8 +2,6 @@
 
     const log = console.log;
 
-    const testButton = document.querySelector(".test");
-
     const libraryTable = document.querySelector("table");
     const newBookButton = document.querySelector(".new-book-button");
     const dialog = document.querySelector("dialog");
@@ -27,10 +25,6 @@
             fd.get("have-read") === "yes" ? true : false
         );
         dialog.close();
-    });
-
-    testButton.addEventListener("click", () => {
-
     });
 
     const myLibrary = [new Book("title 1", "author 1", 5, true), new Book("title 2", "author 2", 821, false)];
