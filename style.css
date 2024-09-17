@@ -1,0 +1,112 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  * {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+  
+/*
+Additional useful things, not from the reset
+*/
+  
+input,
+textarea,
+select,
+button {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+fieldset {
+    position: relative;
+}
+  
+legend {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+  
+input {
+    appearance: none;
+}
+
+/*RESET ENDS*/
+
+/*TABLE*/
+.library-table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+.library-table td, 
+.library-table th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+}
+
+.library-table th {
+    background-color: rgb(235,235,235);
+}
+
+.library-table td {
+    text-align: center;
+}
+  
+.library-table tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+}
+  
+.library-table tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+}
+  
+.library-table caption {
+    padding: 10px;
+}
+
+/*DIALOG*/
+
+dialog {
+    margin: auto;
+}
+
+input[type="radio"] {
+    appearance: auto;
+    width: auto;
+}
+
+::backdrop {
+
+}
+
+/*LISTS*/
+
+ul {
+    padding: 0px;
+}
+
+li {
+    list-style-type: none;
+}

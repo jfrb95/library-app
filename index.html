@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Library App</title>
+</head>
+<body>
+    <dialog>
+        <form method="dialog" class="new-book-form" action="">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required>
+            <br>
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" required>
+            <br>
+            <label for="num-pages">Number of Pages</label>
+            <input type="number" id="num-pages" name="num-pages" required>
+            <br>
+            
+            
+            <fieldset>
+                <legend>Have you read this book?</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="have-read" id="have-read-true" value="yes">
+                        <label for="have-read-true">Yes</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="have-read" id="have-read-false" value="no">
+                        <label for="have-read-false">No</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <button class="cancel">Cancel</button>
+            <button class="add-book">Add Book</button>
+        </form>
+    </dialog>
+
+    <button class="new-book-button">NEW BOOK</button>
+    
+    <table class="library-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Number Of Pages</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <button class="test">TEST</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
