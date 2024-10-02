@@ -27,19 +27,21 @@
         dialog.close();
     });
 
-    const myLibrary = [new Book("title 1", "author 1", 5, true), new Book("title 2", "author 2", 821, false)];
+    const myLibrary = [];
 
-    function Book(title, author, numPages, haveRead) {
-        this.title = title;
-        this.author = author;
-        this.numPages = numPages;
-        this.haveRead = haveRead;
-
-        this.info = function() {
+    class Book {
+        constructor(title, author, numPages, haveRead) {
+            this.title = title;
+            this.author = author;
+            this.numPages = numPages;
+            this.haveRead = haveRead;
+        }
+        
+        info() {
             return `${this.title} by ${this.author}, ${this.numPages} pages, ${this.haveRead ? "finished reading" : "not read yet"}`
         }
 
-        this.changeRead = function() {
+        changeRead() {
             this.haveRead ? this.haveRead = false : this.haveRead = true;
         }
     }
