@@ -12,19 +12,34 @@
     newBookButton.addEventListener("click", () => {
         dialog.showModal();
     });
-    dialogCancelButton.addEventListener("click", () => {
+    dialogCancelButton.addEventListener("click", (event) => {
+        event.preventDefault();
         dialog.close();
     });
     dialogAddBookButton.addEventListener("click", (event) => {
         event.preventDefault();
-        const fd = new FormData(form);
-        addBookToLibrary(
-            fd.get("title"),
-            fd.get("author"),
-            fd.get("num-pages"),
-            fd.get("have-read") === "yes" ? true : false
-        );
-        dialog.close();
+
+        let allInputsValid = true;
+        const inputList = form.querySelectorAll("input");
+        
+        allInputsValid = 
+            Array.prototype.reduce.call(inputList, (acc, curr) => {
+                return acc ? curr.checkValidity() : acc;
+            }, allInputsValid);
+        
+        if (allInputsValid) {
+            const fd = new FormData(form);
+            addBookToLibrary(
+                fd.get("title"),
+                fd.get("author"),
+                fd.get("num-pages"),
+                fd.get("have-read") === "yes" ? true : false
+            );
+            dialog.close();
+        } else {
+            alert("Some inputs invalid, please check again.");
+        }
+        
     });
 
     const myLibrary = [];
